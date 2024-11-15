@@ -10,8 +10,8 @@ const Navbar = () => {
         <Link to="/about">About</Link>
       </div>
       <div className="login flex gap-2 items-center">
-        <div className=" ">
-          <img src={userIcon} alt="" />
+        <div className="">
+          <img className="rounded-full" src={userIcon} alt="" />
         </div>
         <Link to="/auth/login" className="btn btn-neutral rounded-none">Login</Link>
       </div>
