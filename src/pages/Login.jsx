@@ -5,8 +5,8 @@ const Login = () => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
-        console.log(email);
-        console.log(form);
+        const password = form.password.value;
+
     }
     return (
         <div className="min-h-screen flex justify-center items-center">
