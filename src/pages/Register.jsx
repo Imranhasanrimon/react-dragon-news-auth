@@ -7,8 +7,8 @@ const Register = () => {
     const handleSubmit = e => {
         e.preventDefault();
         const form = new FormData(e.target);
-        const name = form.get("Name");
-        const photo = form.get("Photo-Url");
+        // const name = form.get("Name");
+        // const photo = form.get("Photo-Url");
         const email = form.get("email");
         const password = form.get("password");
 
