@@ -19,9 +19,9 @@ const NewsDetails = () => {
                                 src={news.thumbnail_url
                                 }
                                 alt="Shoes"
-                                className="rounded-xl w-full h-96" />
+                                className="rounded-xl" />
                         </figure>
-                        <div className="card-body items-center ">
+                        <div className="card-body">
                             <h2 className="card-title">{news.title}</h2>
                             <p>{news.details}</p>
                             <div className="card-actions">
