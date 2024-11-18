@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
+    const goHome = useNavigate()
     const { logIn } = useContext(AuthContext);
     const handleLogin = (e) => {
         e.preventDefault();
@@ -13,6 +14,7 @@ const Login = () => {
             .then(res => {
                 console.log(res.user);
                 form.reset()
+                goHome("/")
             })
             .catch(err => console.log(err))
 
