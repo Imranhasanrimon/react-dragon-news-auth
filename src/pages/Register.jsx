@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
 
 const Register = () => {
-    const { createNewUser, setUser } = useContext(AuthContext);
+    const { setUser } = useContext(AuthContext);
+    const createNewUser = (email, password) => {
+
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
     const handleSubmit = e => {
         e.preventDefault();
         const form = new FormData(e.target);
